@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/src/image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/d1f6e23e8c.js" crossorigin="anonymous"></script>
+    <title>Momentum</title>
+</head>
+<body>
+    <header>
+        <div class="widget player" id="player" style="height: 130px;">
+            <span class="song-name">Choose a song from the list below or press Play</span>
+            <div class="player-controls">
+                <i class="btn fa-solid fa-backward" id="prevBtn"></i>
+                <i class="btn fa-solid fa-play" id="playBtn"></i> 
+                <i class="btn fa-solid fa-forward" id="nextBtn"></i>
+                <i class="btn fa-solid fa-volume-high" id="volumeBtn"></i>
+                <input type="range" name="volumeRange" value="100" id="volumeRange" min="0" max="1" step="0.01">
+            </div>
+            <div class="progress-bar">
+                <span class="position">00:00</span>
+                <div class="progress-container">
+                    <div class="progressbar"></div>
+                </div>
+                <span class="duration">00:00</span>
+            </div>
+            <audio class="audio" src=""></audio>
+            <i class="btn fa-solid fa-chevron-down" id="playlistBtn"></i>
+            <ul class="play-list">
+                <li>Syd Matters - To All of You</li>
+                <li>Jose Gonzalez - Crosses</li>
+                <li>Sparklehorse, PJ Harvey - Piano fire</li>
+                <li>Syd Matters - Obstacles</li>
+                <li>alt-J - Something Good</li>
+                <li>Breton - Got Well Soon</li>
+                <li>Bright Eyes - Lua</li>
+                <li>Mud Flow - The Sense of Me</li>
+                <li>Mogwai - Kids Will Be Skeletons</li>
+                <li>Foals - Spanish Sahara</li>
+                <li>Michael Holborn, William Henries - Sunbird</li>
+            </ul>
+        </div>
+        <div class="widget weather">
+            <div class="city_container">
+                <input type="text" class="city" placeholder="[Enter city]"/>
+            </div>
+            <i class="weather-icon"></i>
+            <div class="description-container">
+              <span class="temperature">0 °C</span>
+              <span class="weather-description">uknown</span>
+            </div>
+            <div class="wind">uknown</div>
+            <div class="humidity">00%</div>
+          </div>
+    </header>
+    <main>
+        <div class="btnWrap">
+            <button class="btn btn-left" id="btn-left"><i class="fa-solid fa-chevron-left"></i></i></button>
+            <button class="btn btn-right" id="btn-right"><i class="fa-solid fa-chevron-right"></i></i></button>
+        </div>
+        <div class="clock">
+            <time class="widget time" id="time">00:00:00</time>
+            <date class="widget date" id="date">today</date>
+            <div class="widget greeting-container">
+                <span class="greeting">Good morning</span>
+                <input type="text" class="name" placeholder="[Enter name]">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="#settings"><i class="fa-solid fa-gear"></i></a>
+        <div class="quote-container">
+            <button class="btn change-quote"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <div class="quote-content">
+                <div class="quote-area">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p class="quote">Error! Random quote generation is not possible! Check your internet connection!</p>
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="author">iamprakharevich</div>
+            </div>
+        </div>
+        <a href="#links"><i class="fa-solid fa-link"></i></a>
+        <div id="settings" class="popup">
+            <div class="popup_body">
+                <div class="popup_content">
+                    <a href="#" class="popup_close">X</a>
+                    <div class="popup_title">Settings</div>
+                    <div class="settings_content">
+                        <ul class="settings-list">
+                            <li class="lang-set">Language</li>
+                            <li class="wid-set">Widgets</li>
+                            <li class="set-set">Settings</li>
+                            <li class="ab-set">About</li>
+                        </ul>
+                        <ul class="settings-container">
+                            <li class="set-box language-box" id="language-box">
+                                <h3>Language</h3>
+                                <span class="language_set eng">English</span>
+                                <span class="language_set rus">Russian</span>
+                            </li>
+                            <li class="set-box widgets-box" id="widgets-box">
+                                <h3>Widgets</h3>
+                                <div class="line-container">
+                                    <span>Player</span>
+                                    <label class="switch">
+                                        <input type="checkbox" value="player" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="line-container">
+                                    <span>Weather</span>
+                                    <label class="switch">
+                                        <input type="checkbox" value="weather" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="line-container">
+                                    <span>Time</span>
+                                    <label class="switch">
+                                        <input type="checkbox" value="time" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="line-container">
+                                    <span>Date</span>
+                                    <label class="switch">
+                                        <input type="checkbox" value="date" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="line-container">
+                                    <span>Greating</span>
+                                    <label class="switch">
+                                        <input type="checkbox" value="greeting-container" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="line-container">
+                                    <span>Quote</span>
+                                    <label class="switch">
+                                        <input type="checkbox" value="quote-container" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="set-box settings-box" id="settings-box">
+                                <h3>Units</h3>
+                                <span class="units_set metric">Metric</span>
+                                <span class="units_set imperial">Imperial</span>
+                                <h3>Theme</h3>
+                                <span class="theme_set dark">Dark</span>
+                                <span class="theme_set light">Light</span>
+                            </li>
+                            <li class="set-box about-box" id="about-box">
+                                <h3>About</h3>
+                                <span>Life is Momentum v0.9 &copy 2021</span>
+                                <span>by IAMPRAKHAREVICH</span>
+                                <a href="https://github.com/iamprakharevich" target="_blank" rel="noopener noreferrer"><b>source</b></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="links" class="links">
+            <div class="popup_body">
+                <div class="popup_content">
+                    <a href="#" class="popup_close">X</a>
+                    <div class="popup_title">Links</div>
+                    <div class="popup_links">
+                        <a href="https://github.com/iamprakharevich" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/iamprakharevich/?locale=en_US" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank" rel="noopener noreferrer"> <img src="https://mir-s3-cdn-cf.behance.net/projects/404/18cc0f97873733.Y3JvcCwxOTk5LDE1NjQsMCw0MzA.jpg" alt="Just Rick Astley!" height="30" width="30" class="img"> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+</html>

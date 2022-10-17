@@ -1,0 +1,613 @@
+@font-face {
+    font-family: 'DuduCaligraphy';
+    src: url('/src/fonts/Dudu_Calligraphy.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'WhatNotItalic';
+    src: url('/src//fonts/Whatnot W00 Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'WhatNotRegular';
+    src: url('/src/fonts/Whatnot W00 Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LifeIs';
+    src: url('/src/fonts/LifeIs.ttf') format('truetype');
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    max-height: 100vh;
+    background: url("/src/image/1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "WhatNotRegular";
+    background-blend-mode: normal;
+    transition: background-image 1s ease-in-out;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 30vh;
+    min-height: 220px;
+    padding: 20px;
+}
+
+main{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 30vh;
+    min-height: 160px;
+    padding: 20px;
+}
+
+a{
+    text-decoration:none;
+    color: white;
+}
+
+.player{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0, .5);
+    color: white;
+    border-radius: 15px;
+    padding: 7px;
+    gap: 10px;
+    width: 400px;
+    text-align: center;
+    transition: .3s ease-in-out;
+}
+
+#volumeRange{
+    cursor: pointer;
+    width: 100px;
+    height: 5px;
+    border-radius: 5px;
+    opacity: .5;
+    transition: .3s ease-out;
+}
+#volumeRange:hover{
+    opacity: 1;
+}
+
+
+.progress-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.progress-container{
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    height: 5px;
+    width: 250px;
+    cursor: pointer;
+    opacity: .5;
+    transition: .3s ease-in-out;
+}
+
+.progressbar{
+    position: absolute;
+    background-color: #005cc8;
+    border-radius: 5px;
+    height: 5px;
+}
+
+.progress-container:hover{
+    opacity: 1;
+}
+
+.play-list{
+    overflow-x: hidden;
+}
+
+.play-list::-webkit-scrollbar {
+    width: 0;
+}
+
+.play-list li{
+    align-items: start;
+    cursor: pointer;
+    list-style-type: none;
+    opacity: .5;
+    transition: .3s ease-out;
+}
+
+.play-list li:hover{
+    opacity: 1;
+}
+
+.player-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.weather{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 5px;
+    width: 150px;
+    text-align: left;
+    font-family: "DuduCaligraphy";
+    font-size: 20px;
+    background-color: rgba(0,0,0, .5);
+    color: white;
+    border-radius: 15px;
+    padding: 7px;
+    transition: .3s ease-in-out;
+}
+
+.weather-icon{
+    font-size: 30px;
+    align-self: center;
+}
+
+.city_container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.city{
+    width: 130px;
+    height: 34px;
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    font-family: "WhatNotItalic"
+}   
+
+.description-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 12px;
+}
+
+
+
+.btnWrap{
+    position: absolute;
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    top: 50%;
+    margin-top: -16px;
+    padding: 0 15px;
+}
+
+.btn{
+    background-color: transparent;
+    color: white;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    opacity: .5;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.btn:hover{
+    opacity: 1;
+}
+
+.clock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.time{
+    font-size: 8rem;
+    letter-spacing: 5px;
+    transition: .3s ease-in-out;
+}
+
+.date{
+    min-height: 28px;
+    font-size: 30px;
+    font-family: "DuduCaligraphy";
+    transition: .3s ease-in-out;
+}
+
+.greeting-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "WhatNotItalic";
+    font-size: 40px;
+    transition: .3s ease-in-out;
+}
+
+.greeting{
+    width: 50%;
+    text-align: end;
+    transition: .3s ease-in-out;
+}
+
+.name{
+    width: 50%;
+    left: 0px;
+    padding: 10px;
+    font-family: "WhatNotItalic";
+    font-size: 40px;
+    background-color: transparent;
+    color: white;
+    border: 0;
+    outline: 0;
+}
+
+.quote-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    transition: .3s ease-in-out;
+}
+
+.quote-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 65%;
+    color: white;
+}
+
+.quote-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap: 5px;
+}
+
+.quote{
+    font-family: "DuduCaligraphy";
+    text-align: justify;
+}
+
+.quote::first-letter{
+    color: red;
+    font-size: 30px;
+}
+
+.popup{
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y:hidden;
+    overflow-x:hidden;
+    transition:all 0.8s ease 0s;
+}
+
+.links{
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y:hidden;
+    overflow-x:hidden;
+    transition:all 0.8s ease 0s;
+}
+
+.links:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.links:target .popup_content{
+    transform: translate(0px,0px);
+    opacity: 1;
+}
+
+.popup:target .popup_content{
+    transform: translate(0px,0px);
+    opacity: 1;
+}
+
+.popup_body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    font-size: 20px;
+}
+
+.popup_content{
+    background-color: rgba(0,0,0, .5);
+    border-radius: 15px;
+    color: white;
+    max-width: 800px;
+    padding: 30px;
+    position: relative;
+    transition:all 0.8s ease 0s;
+    opacity:0;
+    transform:translate(0px,+100%); 
+}
+
+.popup_close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.popup_title{
+    font-size: 30px;
+    margin:0px 0px 1em 0px;
+    background-color: transparent;
+}
+
+.popup_settings{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    background-color: transparent;
+}
+
+.popup_links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 30px;
+}
+
+.fa-solid{
+    font-size: 24px;
+    color: white;
+}
+
+.fa-brands{
+    color: white;
+    opacity: .5;
+    transition: .3s ease-in-out;
+}
+
+.fa-brands:hover{
+    opacity: 1;
+}
+
+.img{
+    opacity: .5;
+    transition: .3s ease-in-out;
+}
+
+.img:hover{
+    opacity: 1;
+}
+
+.settings_content{
+    display: flex;
+    gap: 10px;
+}
+
+.settings-list{
+    list-style: none;
+}
+
+.settings-list li{
+    margin: 10px;
+    opacity: .5;
+    transition: .3s ease-out;
+    cursor: pointer;
+}
+
+.settings-list li:hover{
+    opacity: 1;
+}
+
+.settings-container{
+    list-style: none;
+    margin: 10px;
+}
+
+.language_set{
+    opacity: .5;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.language_set:hover{
+    opacity: 1;
+}
+
+.units_set{
+    opacity: .5;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.units_set:hover{
+    opacity: 1;
+}
+
+.theme_set{
+    opacity: .5;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.theme_set:hover{
+    opacity: 1;
+}
+
+.set-box{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.set-active{
+    display:flex;
+}
+
+.line-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 14px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 1px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /*responsive screens*/
+  /*mobile*/
+  @media only screen and (max-width: 620px)
+  {
+    body{
+        width: 100vw;
+        height: 100%;
+    }
+
+    header{
+        padding: 10px;
+    }
+
+    .player{
+        width: 50%;
+        height: 150px;
+    }
+
+    input#volumeRange{
+        display: none;
+    }
+
+    .weather{
+        font-size: 1rem;
+    }
+
+    .time{
+        font-size: 5rem;
+    }
+
+    .greeting-container{
+        font-size: 1.5rem;
+    }
+
+    .name{
+        font-size: 1.5rem;
+    }
+
+    .quote{
+        font-size: 1rem;
+    }
+
+    .popup_body{
+        font-size: 1.5rem;
+    }
+
+    .fa-solid{
+        font-size: 1.3rem;
+    }
+  }
