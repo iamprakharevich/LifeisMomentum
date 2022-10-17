@@ -1,21 +1,21 @@
 @font-face {
     font-family: 'DuduCaligraphy';
-    src: url('/src/fonts/Dudu_Calligraphy.ttf') format('truetype');
+    src: url('src/fonts/Dudu_Calligraphy.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'WhatNotItalic';
-    src: url('/src//fonts/Whatnot W00 Italic.ttf') format('truetype');
+    src: url('src//fonts/Whatnot W00 Italic.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'WhatNotRegular';
-    src: url('/src/fonts/Whatnot W00 Regular.ttf') format('truetype');
+    src: url('src/fonts/Whatnot W00 Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'LifeIs';
-    src: url('/src/fonts/LifeIs.ttf') format('truetype');
+    src: url('src/fonts/LifeIs.ttf') format('truetype');
 }
 
 *{
