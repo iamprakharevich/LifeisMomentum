@@ -5,6 +5,11 @@ popups = document.querySelectorAll(".popup_content"),
 links = document.querySelectorAll("a");
 let theme = "dark";
 
+window.addEventListener("load", ()=>{
+    let clientHight = document.documentElement.clientHeight;
+    document.body.setAttribute("style",`max-height: ${clientHight}`)
+})
+
 //+slider
 var slides = ["src/image/1.jpg", "src/image/2.jpg", "src/image/3.jpg", "src/image/4.jpg", "src/image/5.jpg", "src/image/6.jpg", "src/image/7.jpg", "src/image/8.jpg", "src/image/9.jpg", "src/image/10.jpg"]
 let i=0;
