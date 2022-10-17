@@ -6,7 +6,7 @@ links = document.querySelectorAll("a");
 let theme = "dark";
 
 //+slider
-var slides = ["../src/image/1.jpg", "../src/image/2.jpg", "../src/image/3.jpg", "../src/image/4.jpg", "../src/image/5.jpg", "../src/image/6.jpg", "../src/image/7.jpg", "../src/image/8.jpg"]
+var slides = ["src/image/1.jpg", "src/image/2.jpg", "src/image/3.jpg", "src/image/4.jpg", "src/image/5.jpg", "src/image/6.jpg", "src/image/7.jpg", "src/image/8.jpg", "src/image/9.jpg", "src/image/10.jpg"]
 let i=0;
 
 function nextSlide(){
