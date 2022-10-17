@@ -124,16 +124,16 @@ const player = document.getElementById("player"),
     playlistBtn = document.getElementById("playlistBtn");
 
 const songs = [{name:"Syd Matters - To All of You", src: "src/music/Syd Matters - To All of You.mp3", duration: "4:43"},
-{name:"Jose Gonzalez - Crosses",src:"../src/music/Jose Gonzalez - Crosses.mp3",duration:"2:41"},
-{name:"Sparklehorse, PJ Harvey - Piano fire", src:"../src/music/Sparklehorse - Piano Fire.mp3",duration:"2:43"},
-{name:"Syd Matters - Obstacles",src:"../src/music/Syd Matters - Obstacles.mp3",duration:"3:28"},
-{name:"alt-J - Something Good",src:"../src/music/alt-J - Something Good.mp3", duration:"3:38"},
-{name:"Breton - Got Well Soon",src:"../src/music/Breton - Got Well Soon.mp3",duration:"4:48"},
-{name:"Bright Eyes - Lua",src:"../src/music/Bright Eyes - Lua.mp3",duration:"4:31"},
-{name:"Mud Flow - The Sense of Me",src:"../src/music/Mud Flow - The Sense of Me.mp3",duration:"2:32"},
-{name:"Mogwai - Kids Will Be Skeletons",src:"../src/music/Mogwai - Kids Will Be Skeletons.mp3",duration:"5:27"},
-{name:"Foals - Spanish Sahara",src:"../src/music/Foals - Spanish Sahara.mp3",duration:"6:49"},
-{name:"Michael Holborn, William Henries - Sunbird",src:"../src/music/Michael Holborn - Sunbird.mp3",duration:"2:55"}];
+{name:"Jose Gonzalez - Crosses",src:"src/music/Jose Gonzalez - Crosses.mp3",duration:"2:41"},
+{name:"Sparklehorse, PJ Harvey - Piano fire", src:"src/music/Sparklehorse - Piano Fire.mp3",duration:"2:43"},
+{name:"Syd Matters - Obstacles",src:"src/music/Syd Matters - Obstacles.mp3",duration:"3:28"},
+{name:"alt-J - Something Good",src:"src/music/alt-J - Something Good.mp3", duration:"3:38"},
+{name:"Breton - Got Well Soon",src:"src/music/Breton - Got Well Soon.mp3",duration:"4:48"},
+{name:"Bright Eyes - Lua",src:"src/music/Bright Eyes - Lua.mp3",duration:"4:31"},
+{name:"Mud Flow - The Sense of Me",src:"src/music/Mud Flow - The Sense of Me.mp3",duration:"2:32"},
+{name:"Mogwai - Kids Will Be Skeletons",src:"src/music/Mogwai - Kids Will Be Skeletons.mp3",duration:"5:27"},
+{name:"Foals - Spanish Sahara",src:"src/music/Foals - Spanish Sahara.mp3",duration:"6:49"},
+{name:"Michael Holborn, William Henries - Sunbird",src:"src/music/Michael Holborn - Sunbird.mp3",duration:"2:55"}];
 
 let songIndex = 0;
 
