@@ -11,17 +11,17 @@ let i=0;
 
 function nextSlide(){
     if(i<slides.length-1){ i++; 
-        document.body.setAttribute("style", `background: url(${slides[i]}); background-repeat: no-repeat; background-position: center; background-size: cover`);
+        document.body.setAttribute("style", `background: url(https://iamprakharevich.github.io/LifeisMomentum/${slides[i]}); background-repeat: no-repeat; background-position: center; background-size: cover`);
     } else { i=0;
-        document.body.setAttribute("style", `background: url(${slides[i]}); background-repeat: no-repeat; background-position: center; background-size: cover`);
+        document.body.setAttribute("style", `background: url(https://iamprakharevich.github.io/LifeisMomentum/${slides[i]}); background-repeat: no-repeat; background-position: center; background-size: cover`);
     }
 }
 
 function prevSlide(){
     if(i>0){ i--; 
-        document.body.setAttribute("style", `background: url(${slides[i]}); background-repeat: no-repeat; background-position: center; background-size: cover`);
+        document.body.setAttribute("style", `background: url(https://iamprakharevich.github.io/LifeisMomentum/${slides[i]}); background-repeat: no-repeat; background-position: center; background-size: cover`);
     } else { i=slides.length-1;
-        document.body.setAttribute("style", `background: url(${slides[i]}); background-repeat: no-repeat; background-position: center; background-size: cover`);
+        document.body.setAttribute("style", `background: url(https://iamprakharevich.github.io/LifeisMomentum/${slides[i]}); background-repeat: no-repeat; background-position: center; background-size: cover`);
     }
 }
 
